@@ -64,7 +64,7 @@
 
 1. **Clone ou baixe o projeto**
    ```bash
-   cd "C:\Users\vitho\Desktop\TECH ACADEMY 2"
+   cd "https://github.com/vithoroliveira1/MotorsClub"
    ```
 
 2. **Inicie o servidor PHP**
