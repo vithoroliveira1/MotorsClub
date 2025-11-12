@@ -1,0 +1,459 @@
+/* MotorsClub - Estilos Customizados */
+/* Cores: Preta, Vermelha e Cinza */
+
+/* Variáveis CSS para cores */
+:root {
+    --cor-primaria: #dc3545; /* Vermelho Bootstrap (danger) */
+    --cor-secundaria: #343a40; /* Cinza escuro Bootstrap (dark) */
+    --cor-terciaria: #6c757d; /* Cinza Bootstrap (secondary) */
+    --cor-preta: #000000;
+    --cor-cinza-claro: #f8f9fa; /* Cinza claro Bootstrap (light) */
+}
+
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529; /* Cor mais escura para melhor contraste */
+    line-height: 1.6;
+    padding-top: 76px; /* Espaço para navbar fixa */
+    background-color: #ffffff;
+}
+
+/* Navbar Fixa */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-secundaria) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria) !important;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--cor-primaria) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--cor-primaria) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--cor-secundaria) 0%, var(--cor-primaria) 100%);
+    color: white;
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.btn-danger {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--cor-primaria);
+    border-color: white;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dee2e6; /* Borda sutil para melhor definição */
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+    border-color: var(--cor-primaria);
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+.carro-card {
+    transition: all 0.3s ease;
+}
+
+.carro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-secundaria) !important;
+    color: white;
+}
+
+footer h5 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-primaria);
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    color: var(--cor-primaria) !important;
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+}
+
+.bg-danger {
+    background-color: var(--cor-primaria) !important;
+}
+
+.bg-dark {
+    background-color: var(--cor-secundaria) !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Melhor contraste em seções claras */
+section.bg-light,
+.bg-light {
+    color: #212529;
+}
+
+section.bg-light p,
+.bg-light p {
+    color: #495057;
+}
+
+/* Formulário */
+.form-label {
+    font-weight: 600;
+    color: #212529; /* Melhor contraste */
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    color: #212529;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--cor-primaria);
+}
+
+.invalid-feedback {
+    display: block;
+    color: var(--cor-primaria);
+    font-size: 0.875rem;
+}
+
+/* Main Content */
+.main-content {
+    min-height: calc(100vh - 400px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px;
+    }
+    
+    .hero-section {
+        padding: 50px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #212529 !important; /* Preto suave para melhor contraste */
+}
+
+/* Títulos em seções com fundo claro */
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6 {
+    color: #212529;
+}
+
+/* Títulos em seções com fundo escuro */
+.bg-danger h1,
+.bg-danger h2,
+.bg-danger h3,
+.bg-danger h4,
+.bg-danger h5,
+.bg-danger h6,
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.hero-section h1,
+.hero-section h2,
+.hero-section h3 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para melhor legibilidade */
+}
+
+.text-danger {
+    color: var(--cor-primaria) !important;
+}
+
+/* Textos em cards */
+.card-title {
+    color: #212529 !important;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #495057 !important;
+    line-height: 1.6;
+}
+
+/* Listas em cards */
+.card ul li {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.card ul li strong {
+    color: #212529;
+    font-weight: 600;
+}
+
+/* Textos em fundos escuros */
+.bg-danger p,
+.bg-dark p,
+.hero-section p {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Imagens dos carros */
+.card-img-top {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Fallback para imagens que não carregam */
+img[src=""],
+img:not([src]) {
+    background: linear-gradient(135deg, #dc3545 0%, #343a40 100%);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img[src=""]::after,
+img:not([src])::after {
+    content: "Imagem não disponível";
+    color: white;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor-cinza-claro);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c82333;
+}
+
+/* Utilidades */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Loading Spinner (para formulários) */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Alertas */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Textos em geral - melhor contraste */
+p, span, div {
+    color: #212529;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Seções com fundo branco */
+section:not(.bg-danger):not(.bg-dark):not(.hero-section) {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+section:not(.bg-danger):not(.bg-dark):not(.hero-section) p {
+    color: #495057;
+}
+
+/* Melhor contraste em listas */
+ul li, ol li {
+    color: #495057;
+}
+
+/* Links */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+/* Botões com melhor contraste */
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+    border-color: #6c757d;
+}
+
